@@ -9,13 +9,13 @@ import SearchForm from './components/forms/SearchForm.vue';
 import SendForm from './components/forms/SendForm.vue';
 import Navbar from './components/navbar/Navbar.vue';
 import SectionNewmovie from './components/sections/SectionNewmovie.vue';
-import SectionNewmovieAll from './components/sections/SectionNewmovieAll.vue';
+import SectionNewmovie2 from './components/sections/SectionNewmovie2.vue';
 import SectionMovieplaylist from './components/sections/SectionMovieplaylist.vue';
 import SectionLatestnews from './components/sections/SectionLatestnews.vue';
 export default {
     components: {
         AppHeader, AppMain, AppFooter, JumbotronHeader, JumbotronMain, SearchForm, SendForm,
-        Navbar, SectionNewmovie, SectionNewmovieAll, SectionMovieplaylist, SectionLatestnews
+        Navbar, SectionNewmovie, SectionNewmovie2, SectionMovieplaylist, SectionLatestnews
     },
     data() {
         return {
@@ -26,7 +26,9 @@ export default {
 </script>
 <template>
     <app-header></app-header>
+    <app-main></app-main>
 </template>
+
 <style lang="scss">
 @use './assets/scss/style.scss';
 </style>
