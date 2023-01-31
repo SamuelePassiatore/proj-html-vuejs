@@ -26,7 +26,7 @@ export default {
 </script>
 <template>
     <app-header></app-header>
-    <app-main></app-main>
+    <!-- <app-main></app-main> -->
 </template>
 
 <style lang="scss">

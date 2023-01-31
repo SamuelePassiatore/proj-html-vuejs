@@ -1,9 +1,10 @@
 <script>
 import Navbar from './navbar/Navbar.vue';
 import SearchForm from './forms/SearchForm.vue';
+import JumbotronHeader from './jumbotrons/JumbotronHeader.vue';
 export default {
     name: 'AppHeader',
-    components: { Navbar, SearchForm },
+    components: { Navbar, SearchForm, JumbotronHeader },
     data() {
         return {
 
@@ -40,6 +41,7 @@ export default {
                 <navbar></navbar>
             </div>
         </div>
+        <jumbotron-header></jumbotron-header>
     </header>
 </template>
 <style lang="scss" scoped>

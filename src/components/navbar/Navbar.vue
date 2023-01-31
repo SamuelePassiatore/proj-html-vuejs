@@ -35,11 +35,18 @@ nav {
         width: 17px;
         height: 17px;
         border-radius: 50%;
-        background-color: yellow;
+        background-color: #13BE13;
         color: black;
         position: relative;
         bottom: 12px;
         right: 2px;
+        text-align: center;
+        line-height: 17px;
+    }
+
+    .circle-number {
+        font-size: 13px;
+        color: white;
     }
 }
 </style>
