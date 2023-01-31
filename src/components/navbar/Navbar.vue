@@ -29,6 +29,7 @@ nav {
 
     li {
         list-style-type: none;
+        cursor: pointer;
     }
 
     .circle {

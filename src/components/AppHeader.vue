@@ -20,11 +20,11 @@ export default {
                     <i class="fa-regular fa-envelope text-white pe-1"></i>
                     <span class="text-white">Superhit Hot Movie</span>
                     <span class="span-colored pe-3">**King Star**</span>
-                    <i class="fa-brands fa-facebook-f text-blue"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-google-plus-g"></i>
+                    <a href="#"><i class="fa-brands fa-facebook-f text-blue"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
                 </div>
                 <div class="d-flex w-50 justify-content-end align-items-center">
                     <i class="fa-solid fa-lock text-white"></i>
@@ -48,6 +48,10 @@ export default {
 header {
     height: 200px;
     background-color: #060F19;
+
+    a {
+        text-decoration: none;
+    }
 
     .header-top {
         height: 40px;
