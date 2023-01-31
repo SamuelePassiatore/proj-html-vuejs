@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppMain',
+    name: 'Navbar',
     data() {
         return {
 
