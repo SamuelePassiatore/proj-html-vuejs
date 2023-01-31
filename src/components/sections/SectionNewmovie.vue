@@ -1,6 +1,8 @@
 <script>
+import MoviesCard from '../cards/MoviesCard.vue';
 export default {
     name: 'SectionNewmovie',
+    components: { MoviesCard },
     data() {
         return {
             section: [
@@ -137,25 +139,25 @@ export default {
 </script>
 <template>
     <section id="new-movie">
-        <div>
-            <h2>{{ section[0].title }}</h2>
-            <p>{{ section[0].subtitle }}</p>
-            <div v-for="movie in movies" :key="movie.title" class="img-fluid">
-                <img :src="movie.img">
-                <h3>{{ movie.title }}</h3>
-                <span>{{ movie.category }}</span>
-                <span>{{ movie.details }}</span>
-                <span>{{ movie.views }}</span>
-                <span>{{ movie.star }}</span>
+        <div class="container pt-5">
+            <div class="pb-2 ps-3 text-white section-title">
+                <h2>{{ section[0].title }}</h2>
+                <span>{{ section[0].subtitle }}</span>
             </div>
+            <movies-card v-for="movie in movies" :key="movie.title" :movie="movie" class="img-fluid pt-5"></movies-card>
         </div>
     </section>
 </template>
 <style lang="scss" scoped>
 #new-movie {
     min-height: 500px;
-    background-color: red;
+    background-color: #060F19;
     margin-top: 520px;
+
+    .section-title {
+        border-bottom: 1px solid #182028;
+        border-left: 2px solid #13BE13;
+    }
 }
 
 img {
