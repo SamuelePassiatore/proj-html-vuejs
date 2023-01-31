@@ -11,20 +11,35 @@ export default {
 <template>
     <nav class="d-flex justify-content-between align-items-center">
         <ul class="d-flex p-0 m-0">
-            <li class="text-white align-items-center" v-for="item in navbarItems" :key="item">
+            <li class="text-white align-items-center pe-3" v-for="item in navbarItems" :key="item">
                 {{ item }}&blacktriangledown;
             </li>
         </ul>
-        <div><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="d-flex">
+            <i class="fa-solid fa-bag-shopping text-white"></i>
+            <div class="circle">
+                <span class="circle-number">0</span>
+            </div>
+        </div>
     </nav>
 </template>
 <style lang="scss" scoped>
 nav {
     height: 60px;
-    background-color: green;
 
     li {
         list-style-type: none;
+    }
+
+    .circle {
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background-color: yellow;
+        color: black;
+        position: relative;
+        bottom: 12px;
+        right: 2px;
     }
 }
 </style>
