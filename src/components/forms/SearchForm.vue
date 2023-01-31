@@ -21,6 +21,11 @@ input {
     border: 1px solid #182028;
     border-left: 0;
     border-right: 0;
+    color: #13BE13;
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 button {

@@ -6,7 +6,7 @@ export default {
             currentSlideIndex: 0,
             slides: [
                 {
-                    url: 'src/assets/img/slider-1536x520.jpg',
+                    img: 'src/assets/img/slider-1536x520.jpg',
                     welcome: 'Welcome To Our Movies Site',
                     h2: 'OUR SPECIAL MOVIES',
                     h2Colored: 'MOVIES',
@@ -14,7 +14,7 @@ export default {
                     button: 'Read More'
                 },
                 {
-                    url: 'src/assets/img/slider-2-1536x520.jpg',
+                    img: 'src/assets/img/slider-2-1536x520.jpg',
                     welcome: 'Bienvenue Sur Notre Site De Films',
                     h2: 'NOS FILMS SPÉCIAUX',
                     h2Colored: 'FILMS',
@@ -49,7 +49,7 @@ export default {
 <template>
     <div class="jumbotron-header">
         <i class="fa-solid fa-arrow-left fa-2x ps-5" @click="previousSlide"></i>
-        <div class="jumbotron-header-content text-white" :style="{ backgroundImage: `url(${currentSlide.url})` }">
+        <div class="jumbotron-header-content text-white" :style="{ backgroundImage: `url(${currentSlide.img})` }">
             <span>{{ currentSlide.welcome }}</span>
             <h2>{{ currentSlide.h2 }} <span class="title-colored">{{ currentSlide.h2Colored }}</span></h2>
             <p class="paragraph-jumbotron text-center">{{ currentSlide.paragraph }}</p>

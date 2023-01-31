@@ -11,7 +11,7 @@ export default {
 <template>
     <nav class="d-flex justify-content-between align-items-center">
         <ul class="d-flex p-0 m-0">
-            <li class="text-white align-items-center pe-3" v-for="item in navbarItems" :key="item">
+            <li class="align-items-center pe-3" v-for="item in navbarItems" :key="item">
                 {{ item }}&blacktriangledown;
             </li>
         </ul>
@@ -30,6 +30,11 @@ nav {
     li {
         list-style-type: none;
         cursor: pointer;
+        color: white;
+
+        &:hover {
+            color: #13BE13;
+        }
     }
 
     .circle {
