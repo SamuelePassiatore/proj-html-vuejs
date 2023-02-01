@@ -29,7 +29,7 @@ export default {
                     star: "4/10"
                 },
                 {
-                    title: "New Movie Quisque In Strack",
+                    title: "New Movie Quisque In Strackk",
                     img: "src/assets/img/5.jpg",
                     category: "Latest Movie",
                     details: "Details",
@@ -140,11 +140,17 @@ export default {
 <template>
     <section id="new-movie">
         <div class="container pt-5">
-            <div class="pb-2 ps-3 text-white section-title">
-                <h2>{{ section[0].title }}</h2>
-                <span>{{ section[0].subtitle }}</span>
+            <div class="pb-2 ps-3 text-white section-title d-flex justify-content-between align-items-center">
+                <div>
+                    <h2>{{ section[0].title }}</h2>
+                    <span>{{ section[0].subtitle }}</span>
+                </div>
+                <div>
+                    <i class="fa-regular fa-circle-left fa-2x"></i>
+                    <i class="fa-regular fa-circle-right fa-2x ps-2"></i>
+                </div>
             </div>
-            <movies-card v-for="movie in movies" :key="movie.title" :movie="movie" class="img-fluid pt-5"></movies-card>
+            <movies-card v-for="movie in movies" :key="movie.title" :movie="movie"></movies-card>
         </div>
     </section>
 </template>
@@ -157,10 +163,11 @@ export default {
     .section-title {
         border-bottom: 1px solid #182028;
         border-left: 2px solid #13BE13;
-    }
-}
 
-img {
-    width: 100px;
+        .fa-regular {
+            color: #13BE13;
+            cursor: pointer;
+        }
+    }
 }
 </style>
