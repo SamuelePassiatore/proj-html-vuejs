@@ -92,7 +92,7 @@ export default {
                 <h2>{{ section[0].title }}</h2>
                 <span>{{ section[0].subtitle }}</span>
             </div>
-            <div class="row g-0 pt-5 justify-content-between text-white">
+            <div class="row g-0 pt-4 justify-content-between text-white">
                 <div class="col-screen">
                     <div class="background-default">
                         <div class="background-default-top d-flex align-items-center p-3">

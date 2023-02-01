@@ -73,14 +73,14 @@ export default {
                     <span>{{ section[0].subtitle }}</span>
                 </div>
             </div>
-            <div class="py-5">
+            <div class="py-4">
                 <ul class="d-flex">
                     <li class="fs-5 pe-4" v-for="(genre, index) in genres" :key="genre"
                         :class="{ 'text-colored': index === 0 }">{{ genre }}
                     </li>
                 </ul>
             </div>
-            <div class="row g-4 pb-5">
+            <div class="row g-4">
                 <div class="col-4" v-for="movie in movies" :key="movie.title">
                     <div class="card-custom">
                         <img :src="movie.img" class="card-image">
@@ -89,7 +89,9 @@ export default {
                             <span class="card-category fw-bold fs-5">Category: {{ movie.category }}</span>
                             <span class="card-details">{{ movie.details }}</span>
                             <span class="card-views">{{ movie.views }}</span>
-                            <span class="card-star"><i class="fa-solid fa-star text-colored"></i>{{ movie.star }}</span>
+                            <span class="card-star"><i class="fa-solid fa-star text-colored pe-1"></i>{{
+                                movie.star
+                            }}</span>
                         </div>
                     </div>
                 </div>
@@ -127,47 +129,44 @@ export default {
         filter: brightness(0.6);
     }
 
-    .card-body {
-        bottom: 30px;
-
-        .card-title {
-            position: absolute;
-            bottom: 125px;
-            left: 12px;
-        }
-
-
-        .card-category {
-            position: absolute;
-            bottom: 90px;
-            left: 12px;
-        }
-
-        .card-views {
-            position: absolute;
-            bottom: 25px;
-            right: 0;
-            padding: 4px 12px;
-            background-color: #060F19;
-            border-top-left-radius: 18px;
-            border-bottom-left-radius: 18px;
-        }
-
-        .card-details {
-            position: absolute;
-            bottom: 25px;
-            left: 0;
-            padding: 4px 12px;
-            background-color: #060F19;
-            border-top-right-radius: 18px;
-            border-bottom-right-radius: 18px;
-        }
-
-        .card-star {
-            position: absolute;
-            top: 20px;
-            right: 10px;
-        }
+    .card-title {
+        position: absolute;
+        bottom: 125px;
+        left: 12px;
     }
+
+
+    .card-category {
+        position: absolute;
+        bottom: 90px;
+        left: 12px;
+    }
+
+    .card-views {
+        position: absolute;
+        bottom: 25px;
+        right: 0;
+        padding: 4px 12px;
+        background-color: #060F19;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+    }
+
+    .card-details {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        padding: 4px 12px;
+        background-color: #060F19;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+    }
+
+    .card-star {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
 }
 </style>

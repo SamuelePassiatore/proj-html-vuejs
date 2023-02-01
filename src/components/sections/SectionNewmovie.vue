@@ -150,7 +150,7 @@ export default {
                     <i class="fa-regular fa-circle-right fa-2x ps-2"></i>
                 </div>
             </div>
-            <div class="row g-0 py-5">
+            <div class="row g-0 pt-4">
                 <movies-card v-for="movie in movies" :key="movie.title" :movie="movie"></movies-card>
             </div>
         </div>
