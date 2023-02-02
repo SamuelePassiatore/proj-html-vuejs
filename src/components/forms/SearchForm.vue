@@ -21,7 +21,7 @@ input {
     border: 1px solid #182028;
     border-left: 0;
     border-right: 0;
-    color: #13BE13;
+    color: #2CA6A4;
 
     &:focus {
         outline: 0;
@@ -29,6 +29,6 @@ input {
 }
 
 button {
-    background-color: #13BE13;
+    background-color: #2CA6A4;
 }
 </style>

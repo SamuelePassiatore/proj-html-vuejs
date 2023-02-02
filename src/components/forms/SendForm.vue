@@ -8,7 +8,7 @@ export default {
 <template>
     <div class="send-form pb-5">
         <div class="container position-relative">
-            <img src="../../assets/img/form-bg-1.png" alt="form-background" class="w-100">
+            <img src="../../assets/img/-m.png" alt="form-background" class="w-100">
             <div class="inputs d-flex justify-content-center">
                 <input type="text" placeholder="First Name">
                 <input type="text" placeholder="Last Name">

@@ -40,7 +40,7 @@ export default {
         padding-left: 300px;
 
         .colored {
-            color: #13BE13;
+            color: #2CA6A4;
         }
 
         .contdown-text {

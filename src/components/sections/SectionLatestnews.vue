@@ -98,7 +98,7 @@ export default {
 
     .section-title {
         border-bottom: 1px solid #182028;
-        border-left: 2px solid #13BE13;
+        border-left: 2px solid #2CA6A4;
     }
 
     .col-6 {

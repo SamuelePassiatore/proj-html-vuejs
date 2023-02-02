@@ -59,7 +59,7 @@ header {
         border-bottom: 1px solid #182028;
 
         .span-colored {
-            color: #13BE13;
+            color: #2CA6A4;
         }
 
         .fa-brands {

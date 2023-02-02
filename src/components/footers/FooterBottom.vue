@@ -37,7 +37,7 @@ export default {
     color: white;
 
     .text-colored {
-        color: #13BE13;
+        color: #2CA6A4;
     }
 }
 </style>

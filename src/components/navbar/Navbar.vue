@@ -33,7 +33,7 @@ nav {
         color: white;
 
         &:hover {
-            color: #13BE13;
+            color: #2CA6A4;
         }
     }
 
@@ -41,7 +41,7 @@ nav {
         width: 17px;
         height: 17px;
         border-radius: 50%;
-        background-color: #13BE13;
+        background-color: #2CA6A4;
         color: black;
         position: relative;
         bottom: 12px;

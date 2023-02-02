@@ -73,7 +73,7 @@ export default {
         cursor: pointer;
 
         &:hover {
-            color: #13BE13;
+            color: #2CA6A4;
         }
     }
 
@@ -92,7 +92,7 @@ export default {
     }
 
     .title-colored {
-        color: #13BE13;
+        color: #2CA6A4;
     }
 
     .paragraph-jumbotron {
@@ -102,7 +102,7 @@ export default {
 
 
     button {
-        background-color: #13BE13;
+        background-color: #2CA6A4;
     }
 }
 </style>
