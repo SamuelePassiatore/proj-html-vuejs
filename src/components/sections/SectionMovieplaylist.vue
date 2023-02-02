@@ -3,6 +3,8 @@ export default {
     name: 'SectionMovieplaylist',
     data() {
         return {
+            displayScreenDefault: 'd-block',
+            displayScreenNew: 'd-none',
             section: [
                 {
                     title: 'Movie Playlist',
@@ -82,7 +84,20 @@ export default {
                 }
             ]
         }
-    }
+    },
+    methods: {
+        resetDisplay() {
+            this.displayScreenDefault = 'd-block';
+            this.displayScreenNew = 'd-none';
+        },
+        toggleScreen() {
+            this.resetDisplay();
+            setTimeout(() => {
+                this.displayScreenDefault = this.displayScreenDefault === 'd-block' ? 'd-none' : 'd-block';
+                this.displayScreenNew = this.displayScreenNew === 'd-block' ? 'd-none' : 'd-block';
+            }, 1000);
+        },
+    },
 };
 </script>
 <template>
@@ -93,7 +108,7 @@ export default {
                 <span>{{ section[0].subtitle }}</span>
             </div>
             <div class="row g-0 pt-4 justify-content-between text-white">
-                <div class="col-screen">
+                <div class="col-screen col-screen-default" :class="displayScreenDefault">
                     <div class="background-default">
                         <div class="background-default-top d-flex align-items-center p-3">
                             <div>
@@ -102,25 +117,56 @@ export default {
                                 <span class="ps-3">Yeh Saali Aashiqui | Official trailer | Verdhan Puri,
                                     Shivaleek...</span>
                             </div>
-                            <div class="text-center ps-5">
-                                <i class="fa-solid fa-clock"></i>
-                                <div>Guarda più...</div>
-                            </div>
-                            <div class="text-center ps-3">
-                                <i class="fa-solid fa-share"></i>
-                                <div>Condividi</div>
+                            <div class="d-flex">
+                                <div class="text-center ps-5">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>Guarda più...</div>
+                                </div>
+                                <div class="text-center ps-3">
+                                    <i class="fa-solid fa-share"></i>
+                                    <div>Condividi</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="background-default-bottom">
+                        <div class="background-default-bottom py-2">
                             <span class="text-white">Guarda su</span>
                             <img src="../../assets/img/logo-youtube.webp" class="img-fluid youtube-logo"
                                 alt="youtube-logo">
                         </div>
                     </div>
-                    <div class="video-background">
-
+                </div>
+                <div class="col-screen col-screen-new" :class="displayScreenNew">
+                    <div class="background-new">
+                        <div class="background-new-top d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <img src="../../assets/img/channels4_profile.jpg" alt="logo-channel"
+                                    class="logo-channel">
+                                <span class="ps-3">Yeh Saali Aashiqui | Official trailer | Verdhan Puri,
+                                    Shivaleek...</span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="text-center ps-5">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>Guarda più...</div>
+                                </div>
+                                <div class="text-center ps-3">
+                                    <i class="fa-solid fa-share"></i>
+                                    <div>Condividi</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="background-new-center h-50 d-flex justify-content-center">
+                            <img src="../../assets/img/image (11).svg" alt="img-youtube-video">
+                        </div>
+                        <div class="background-new-bottom py-2">
+                            <span class="text-white">Guarda su</span>
+                            <img src="../../assets/img/logo-youtube.webp" class="img-fluid youtube-logo"
+                                alt="youtube-logo">
+                        </div>
                     </div>
                 </div>
+
+
                 <div class="col-playlist">
                     <div class="playlist-title p-3">
                         <h3>New Movie</h3>
@@ -132,7 +178,7 @@ export default {
                                 <img :src="movie.img" :alt="movie.title" class="figure-img">
                             </div>
                             <div class="playlist-content w-100">
-                                <h5 class="m-0 pb-1">{{ movie.title }}</h5>
+                                <h5 @click="toggleScreen" class="m-0 pb-1">{{ movie.title }}</h5>
                                 <span class="font-size-small">{{ movie.views }}</span>
                                 <div class="font-size-small d-flex justify-content-between">
                                     <div>{{ movie.date }}</div>
@@ -159,8 +205,13 @@ export default {
     .col-screen {
         height: 500px;
         width: 66%;
-        background-color: black;
         position: relative;
+        display: none;
+    }
+
+    // Screen default black
+    .col-screen-default {
+        background-color: black;
 
         .logo-channel {
             border-radius: 50%;
@@ -171,7 +222,45 @@ export default {
             display: inline-block;
             padding: 5px 10px;
             position: absolute;
-            bottom: 3px;
+            bottom: 5px;
+        }
+
+        .youtube-logo {
+            filter: invert(1);
+            width: 90px;
+        }
+    }
+
+    // Screen New with movie
+    .col-screen-new {
+        background-image: url('../../assets/img/maxresdefault.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .background-new {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            .background-new-center img {
+                width: 70px;
+                cursor: pointer;
+            }
+        }
+
+        .logo-channel {
+            border-radius: 50%;
+        }
+
+        .background-new-bottom {
+            background-color: #121212;
+            display: inline-block;
+            padding: 5px 10px;
+            position: absolute;
+            bottom: 5px;
         }
 
         .youtube-logo {
@@ -194,6 +283,14 @@ export default {
         .playlist-content {
             height: calc(100% - 92px);
             overflow-y: auto;
+
+            h5 {
+                cursor: pointer;
+
+                &:hover {
+                    color: #13BE13;
+                }
+            }
 
             .figure-img {
                 height: 95px;
