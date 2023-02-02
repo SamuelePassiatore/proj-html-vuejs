@@ -45,9 +45,11 @@ export default {
     </header>
 </template>
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
 header {
     height: 200px;
-    background-color: #060F19;
+    background-color: $dark-blue;
 
     a {
         text-decoration: none;
@@ -56,10 +58,10 @@ header {
     .header-top {
         height: 40px;
         font-size: 13px;
-        border-bottom: 1px solid #182028;
+        border-bottom: 1px solid $light-blue;
 
         .span-colored {
-            color: #2CA6A4;
+            color: $primary;
         }
 
         .fa-brands {
@@ -73,7 +75,7 @@ header {
 
     .header-center {
         height: 100px;
-        border-bottom: 1px solid #182028;
+        border-bottom: 1px solid $light-blue;
     }
 }
 </style>

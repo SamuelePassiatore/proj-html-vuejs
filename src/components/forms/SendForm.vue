@@ -20,8 +20,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 .send-form {
-    background-color: #060F19;
+    background-color: $dark-blue;
 
     .inputs {
         width: 100%;
@@ -33,8 +35,8 @@ export default {
             margin: 0 15px;
             padding: 15px 25px;
             border-radius: 30px;
-            border: 1px solid white;
-            color: white;
+            border: 1px solid $white;
+            color: $white;
             background-color: transparent;
 
             &:focus {
@@ -42,7 +44,7 @@ export default {
             }
 
             &::placeholder {
-                color: white;
+                color: $white;
             }
         }
     }
@@ -55,13 +57,13 @@ export default {
         transform: translate(-50%);
         padding: 12px 40px;
         border-radius: 30px;
-        color: white;
+        color: $white;
         border: 0;
-        background-color: #060F19;
+        background-color: $dark-blue;
 
         &:hover {
-            background-color: white;
-            color: #060F19;
+            background-color: $white;
+            color: $dark-blue;
         }
     }
 

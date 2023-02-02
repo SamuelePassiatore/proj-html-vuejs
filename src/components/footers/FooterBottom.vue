@@ -30,13 +30,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 .footer-bottom {
-    background-color: #060F19;
+    background-color: $dark-blue;
     min-height: 60px;
     color: white;
 
     .text-colored {
-        color: #2CA6A4;
+        color: $primary;
     }
 }
 </style>

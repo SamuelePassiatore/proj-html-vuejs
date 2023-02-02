@@ -180,28 +180,31 @@ export default {
         </div>
     </section>
 </template>
+
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 #new-movie {
     min-height: 500px;
-    background-color: #060F19;
+    background-color: $dark-blue;
     margin-top: 520px;
 
     .section-title {
-        border-bottom: 1px solid #182028;
-        border-left: 2px solid #2CA6A4;
+        border-bottom: 1px solid $light-blue;
+        border-left: 2px solid $primary;
 
         .fa-regular {
-            color: #2CA6A4;
+            color: $primary;
             cursor: pointer;
 
             &:hover {
-                color: white;
+                color: $white;
             }
         }
     }
 
     .border-slider {
-        border: 3px solid #2CA6A4;
+        border: 3px solid $primary;
     }
 
 }

@@ -16,12 +16,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 input {
     background-color: transparent;
-    border: 1px solid #182028;
+    border: 1px solid $light-blue;
     border-left: 0;
     border-right: 0;
-    color: #2CA6A4;
+    color: $primary;
 
     &:focus {
         outline: 0;
@@ -29,6 +31,6 @@ input {
 }
 
 button {
-    background-color: #2CA6A4;
+    background-color: $primary;
 }
 </style>

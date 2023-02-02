@@ -192,14 +192,17 @@ export default {
         </div>
     </section>
 </template>
+
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 #movie-playlist {
     min-height: 500px;
-    background-color: #060F19;
+    background-color: $dark-blue;
 
     .section-title {
-        border-bottom: 1px solid #182028;
-        border-left: 2px solid #2CA6A4;
+        border-bottom: 1px solid $light-blue;
+        border-left: 2px solid $primary;
     }
 
     .col-screen {
@@ -211,14 +214,14 @@ export default {
 
     // Screen default black
     .col-screen-default {
-        background-color: black;
+        background-color: $black;
 
         .logo-channel {
             border-radius: 50%;
         }
 
         .background-default-bottom {
-            background-color: #121212;
+            background-color: $dark-grey;
             display: inline-block;
             padding: 5px 10px;
             position: absolute;
@@ -256,7 +259,7 @@ export default {
         }
 
         .background-new-bottom {
-            background-color: #121212;
+            background-color: $dark-grey;
             display: inline-block;
             padding: 5px 10px;
             position: absolute;
@@ -272,12 +275,12 @@ export default {
     .col-playlist {
         height: 500px;
         width: 31%;
-        background-color: #182028;
+        background-color: $light-blue;
 
         .playlist-title {
             height: 92px;
             position: sticky;
-            border-bottom: 1px solid #060F19;
+            border-bottom: 1px solid $dark-blue;
         }
 
         .playlist-content {
@@ -288,7 +291,7 @@ export default {
                 cursor: pointer;
 
                 &:hover {
-                    color: #2CA6A4;
+                    color: $primary;
                 }
             }
 

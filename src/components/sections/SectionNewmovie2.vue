@@ -99,28 +99,31 @@ export default {
         </div>
     </section>
 </template>
+
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 #new-movie-2 {
     min-height: 500px;
-    background-color: #060F19;
+    background-color: $dark-blue;
 
     .section-title {
-        border-bottom: 1px solid #182028;
-        border-left: 2px solid #2CA6A4;
+        border-bottom: 1px solid $light-blue;
+        border-left: 2px solid $primary;
     }
 
     li {
-        color: white;
+        color: $white;
         cursor: pointer;
     }
 
     .text-colored {
-        color: #2CA6A4;
+        color: $primary;
     }
 
     .card-custom {
         position: relative;
-        color: white;
+        color: $white;
     }
 
     .card-image {
@@ -147,7 +150,7 @@ export default {
         bottom: 25px;
         right: 0;
         padding: 4px 12px;
-        background-color: #060F19;
+        background-color: $dark-blue;
         border-top-left-radius: 18px;
         border-bottom-left-radius: 18px;
     }
@@ -157,7 +160,7 @@ export default {
         bottom: 25px;
         left: 0;
         padding: 4px 12px;
-        background-color: #060F19;
+        background-color: $dark-blue;
         border-top-right-radius: 18px;
         border-bottom-right-radius: 18px;
     }

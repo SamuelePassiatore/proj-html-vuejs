@@ -23,17 +23,20 @@ export default {
         </div>
     </nav>
 </template>
+
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 nav {
     height: 60px;
 
     li {
         list-style-type: none;
         cursor: pointer;
-        color: white;
+        color: $white;
 
         &:hover {
-            color: #2CA6A4;
+            color: $primary;
         }
     }
 
@@ -41,8 +44,7 @@ nav {
         width: 17px;
         height: 17px;
         border-radius: 50%;
-        background-color: #2CA6A4;
-        color: black;
+        background-color: $primary;
         position: relative;
         bottom: 12px;
         right: 2px;
@@ -52,7 +54,7 @@ nav {
 
     .circle-number {
         font-size: 13px;
-        color: white;
+        color: $white;
     }
 }
 </style>

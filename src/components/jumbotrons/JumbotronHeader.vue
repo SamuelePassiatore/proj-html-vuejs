@@ -59,6 +59,8 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 .jumbotron-header {
     height: 520px;
     background-size: cover;
@@ -69,11 +71,11 @@ export default {
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
-        color: #fff;
+        color: $white;
         cursor: pointer;
 
         &:hover {
-            color: #2CA6A4;
+            color: $primary;
         }
     }
 
@@ -92,17 +94,15 @@ export default {
     }
 
     .title-colored {
-        color: #2CA6A4;
+        color: $primary;
     }
 
     .paragraph-jumbotron {
         width: 40%;
     }
 
-
-
     button {
-        background-color: #2CA6A4;
+        background-color: $primary;
     }
 }
 </style>

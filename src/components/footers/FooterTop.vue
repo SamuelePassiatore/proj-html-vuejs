@@ -80,6 +80,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 .footer-top {
     position: relative;
     background-image: url('../../assets/img/ft-bg.jpg');
@@ -97,29 +99,29 @@ export default {
     }
 
     .border-bottom {
-        background-color: white;
+        background-color: $white;
         height: 2px;
         width: 35px;
     }
 
     .facebook-circle {
-        background-color: #37538F;
+        background-color: $blue-facebook;
     }
 
     .twitter-circle {
-        background-color: #00ACEE;
+        background-color: $blue-twitter;
     }
 
     .linkedin-circle {
-        background-color: #0D72A2;
+        background-color: $blue-linkedin;
     }
 
     .instagram-circle {
-        background-color: #DB4A39;
+        background-color: $orange;
     }
 
     .pinterest-circle {
-        background-color: #7D1A23;
+        background-color: $red;
     }
 
     a {
@@ -134,7 +136,7 @@ export default {
     }
 
     .fa-brands {
-        color: white;
+        color: $white;
     }
 
     .font-smaller {

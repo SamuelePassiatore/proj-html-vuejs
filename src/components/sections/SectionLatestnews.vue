@@ -92,13 +92,15 @@ export default {
     </section>
 </template>
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 #latest-news {
     min-height: 500px;
-    background-color: #060F19;
+    background-color: $dark-blue;
 
     .section-title {
-        border-bottom: 1px solid #182028;
-        border-left: 2px solid #2CA6A4;
+        border-bottom: 1px solid $light-blue;
+        border-left: 2px solid $primary;
     }
 
     .col-6 {
@@ -106,7 +108,7 @@ export default {
 
         .card-custom,
         .thumbnails-custom {
-            color: white;
+            color: $white;
             position: relative;
 
             .card-image,
@@ -128,7 +130,7 @@ export default {
                 bottom: 25px;
                 left: 0;
                 padding: 4px 12px;
-                background-color: #060F19;
+                background-color: $dark-blue;
                 border-top-right-radius: 18px;
                 border-bottom-right-radius: 18px;
             }

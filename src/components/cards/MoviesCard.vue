@@ -21,6 +21,8 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
+@use '../../assets/scss/partials/variables' as *;
+
 .card-image {
     height: 500px;
     filter: brightness(0.6);
@@ -28,7 +30,7 @@ export default {
 }
 
 .text-colored {
-    color: #2CA6A4;
+    color: $primary;
 }
 
 .card-title {
@@ -49,7 +51,7 @@ export default {
     bottom: 25px;
     right: 0;
     padding: 4px 12px;
-    background-color: #060F19;
+    background-color: $dark-blue;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
 }
@@ -59,7 +61,7 @@ export default {
     bottom: 25px;
     left: 0;
     padding: 4px 12px;
-    background-color: #060F19;
+    background-color: $dark-blue;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
 }
