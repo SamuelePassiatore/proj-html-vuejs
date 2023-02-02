@@ -24,6 +24,7 @@ export default {
 .card-image {
     height: 500px;
     filter: brightness(0.6);
+    border: 3px solid transparent;
 }
 
 .text-colored {

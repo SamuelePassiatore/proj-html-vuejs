@@ -5,6 +5,7 @@ export default {
     components: { MoviesCard },
     data() {
         return {
+            currentIndex: 0,
             section: [
                 {
                     title: 'New Movie',
@@ -134,6 +135,22 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        nextImage() {
+            if (this.currentIndex === this.movies.length - 1) {
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
+            }
+        },
+        prevImage() {
+            if (this.currentIndex === 0) {
+                this.currentIndex = this.movies.length - 1;
+            } else {
+                this.currentIndex--;
+            }
+        }
     }
 };
 </script>
@@ -146,12 +163,13 @@ export default {
                     <span>{{ section[0].subtitle }}</span>
                 </div>
                 <div>
-                    <i class="fa-regular fa-circle-left fa-2x"></i>
-                    <i class="fa-regular fa-circle-right fa-2x ps-2"></i>
+                    <i class="fa-regular fa-circle-left fa-2x" @click="prevImage"></i>
+                    <i class="fa-regular fa-circle-right fa-2x ps-2" @click="nextImage"></i>
                 </div>
             </div>
             <div class="row g-0 pt-4">
-                <movies-card v-for="movie in movies" :key="movie.title" :movie="movie"></movies-card>
+                <movies-card v-for="(movie, index) in movies" :key="index" :movie="movie"
+                    :class="{ 'border-slider': index === currentIndex, 'rounded-5': true }"></movies-card>
             </div>
         </div>
     </section>
@@ -174,6 +192,10 @@ export default {
                 color: white;
             }
         }
+    }
+
+    .border-slider {
+        border: 3px solid #2CA6A4;
     }
 
 }
