@@ -136,6 +136,12 @@ export default {
             ]
         }
     },
+    computed: {
+        visibleMovies() {
+            return this.movies.slice(this.currentIndex, this.currentIndex + 3);
+        }
+    },
+
     methods: {
         nextImage() {
             if (this.currentIndex === this.movies.length - 1) {
@@ -168,7 +174,7 @@ export default {
                 </div>
             </div>
             <div class="row g-0 pt-4">
-                <movies-card v-for="(movie, index) in movies" :key="index" :movie="movie"
+                <movies-card v-for="(movie, index) in visibleMovies" :key="index" :movie="movie"
                     :class="{ 'border-slider': index === currentIndex, 'rounded-5': true }"></movies-card>
             </div>
         </div>
