@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-    <div class="send-form">
+    <div class="send-form pb-5">
         <div class="container position-relative">
             <img src="../../assets/img/form-bg-1.png" alt="form-background" class="w-100">
             <div class="inputs d-flex justify-content-center">

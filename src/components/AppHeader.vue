@@ -66,24 +66,8 @@ header {
             padding-right: 10px;
         }
 
-        .fa-facebook-f {
-            color: #37538F;
-        }
-
-        .fa-twitter {
-            color: #00ACEE;
-        }
-
-        .fa-linkedin-in {
-            color: #0D72A2;
-        }
-
         .fa-instagram {
             color: #7D1A23;
-        }
-
-        .fa-google-plus-g {
-            color: #DB4A39;
         }
     }
 
