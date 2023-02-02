@@ -1,8 +1,9 @@
 <script>
 import FooterTop from './footers/FooterTop.vue';
+import FooterBottom from './footers/FooterBottom.vue';
 export default {
     name: 'AppFooter',
-    components: { FooterTop },
+    components: { FooterTop, FooterBottom },
     data() {
         return {
 
@@ -12,6 +13,7 @@ export default {
 </script>
 <template>
     <footer-top></footer-top>
+    <footer-bottom></footer-bottom>
 </template>
 <style lang="scss" scoped>
 

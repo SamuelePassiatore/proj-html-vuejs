@@ -85,7 +85,7 @@ export default {
     background-image: url('../../assets/img/ft-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 480px;
+    min-height: 500px;
 
     .overlay {
         position: absolute;
