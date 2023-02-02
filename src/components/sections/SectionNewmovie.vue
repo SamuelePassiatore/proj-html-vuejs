@@ -23,7 +23,7 @@ export default {
                 {
                     title: "Quisque Auctor Movie in Strack",
                     img: "src/assets/img/2.jpg",
-                    category: "Top rating",
+                    category: "Coming Soon",
                     details: "Details",
                     views: "947 Views",
                     star: "4/10"
@@ -169,7 +169,12 @@ export default {
         .fa-regular {
             color: #2CA6A4;
             cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
         }
     }
+
 }
 </style>

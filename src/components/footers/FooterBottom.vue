@@ -25,7 +25,6 @@ export default {
                 <span>All Rights Reserved.</span>
             </div>
         </div>
-
     </div>
 
 </template>
