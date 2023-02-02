@@ -178,8 +178,8 @@ export default {
             </div>
             <!-- Row with for cycle and props passed to movies card -->
             <div class="row g-0 pt-4">
-                <movies-card v-for="(movie, index) in visibleMovies" :key="index" :movie="movie"
-                    :class="{ 'border-slider': index === currentIndex, 'rounded-5': true }"></movies-card>
+                <newmovies-card v-for="(movie, index) in visibleMovies" :key="index" :movie="movie"
+                    :class="{ 'border-slider': index === currentIndex, 'rounded-5': true }"></newmovies-card>
             </div>
         </div>
     </section>
