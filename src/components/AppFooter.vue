@@ -11,10 +11,12 @@ export default {
     }
 };
 </script>
+
 <template>
     <footer-top></footer-top>
     <footer-bottom></footer-bottom>
 </template>
+
 <style lang="scss" scoped>
 
 </style>

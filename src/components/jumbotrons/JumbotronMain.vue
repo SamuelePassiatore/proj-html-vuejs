@@ -10,6 +10,7 @@ export default {
 </script>
 <template>
     <div class="jumbotron-main">
+        <!-- Jumbotron content -->
         <div class="jumbotron-main-content text-white">
             <span class="colored">COMING SOON MOVIE</span>
             <h2 class="fs-1">MAX STILL</h2>
@@ -17,7 +18,6 @@ export default {
                 <div class="fw-bold pb-2">JOHN PLAYER <span class="colored">&</span> EMILY ROSE</div>
                 <div>THE COUNTDOWN IS FINISHED!</div>
             </div>
-
         </div>
     </div>
 </template>
@@ -31,7 +31,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
 
     .jumbotron-main-content {
         display: flex;
@@ -50,7 +49,5 @@ export default {
             font-size: 13px;
         }
     }
-
-
 }
 </style>

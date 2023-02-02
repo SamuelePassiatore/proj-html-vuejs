@@ -49,16 +49,21 @@ export default {
     }
 };
 </script>
+
 <template>
     <section id="latest-news">
+        <!-- Container -->
         <div class="container py-5">
+            <!-- Section title -->
             <div class="pb-2 ps-3 section-title text-white d-flex justify-content-between align-items-center">
                 <div>
                     <h2>{{ section[0].title }}</h2>
                     <span>{{ section[0].subtitle }}</span>
                 </div>
             </div>
+            <!-- Row with cards -->
             <div class="row pt-4">
+                <!-- Single big card on left -->
                 <div class="col-6">
                     <div class="card-custom">
                         <img :src="images[0].img" class="card-image">
@@ -73,8 +78,11 @@ export default {
                         </div>
                     </div>
                 </div>
+                <!-- Four cards small on right -->
                 <div class="col-6">
+                    <!-- Row inside col for bootstrap -->
                     <div class="row h-100 gy-2">
+                        <!-- For cycle single thumbnails -->
                         <div class="thumbnails h-50 w-50" v-for="thumbnail in thumbnails" :key="thumbnail.title">
                             <div class="thumbnails-custom">
                                 <img :src="thumbnail.img" class="thumbnails-image">
@@ -91,9 +99,11 @@ export default {
         </div>
     </section>
 </template>
+
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+// Section latest news
 #latest-news {
     min-height: 500px;
     background-color: $dark-blue;
@@ -103,6 +113,7 @@ export default {
         border-left: 2px solid $primary;
     }
 
+    // Generics for cols
     .col-6 {
         min-height: 520px;
 
@@ -118,12 +129,6 @@ export default {
                 filter: brightness(0.4);
             }
 
-            .card-title {
-                position: absolute;
-                bottom: 90px;
-                padding: 4px 12px;
-            }
-
             .card-details,
             .thumbnails-details {
                 position: absolute;
@@ -135,6 +140,13 @@ export default {
                 border-bottom-right-radius: 18px;
             }
 
+            // Single big card on left
+            .card-title {
+                position: absolute;
+                bottom: 90px;
+                padding: 4px 12px;
+            }
+
             .card-info {
                 position: absolute;
                 bottom: 25px;
@@ -142,6 +154,8 @@ export default {
                 padding: 4px 12px;
             }
 
+
+            // Four cards small on right - thumbnails
             .thumbnails-title {
                 position: absolute;
                 bottom: 70px;

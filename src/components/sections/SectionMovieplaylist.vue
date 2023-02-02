@@ -91,7 +91,9 @@ export default {
             this.displayScreenNew = 'd-none';
         },
         toggleScreen() {
+            // Before reset display
             this.resetDisplay();
+            // Then 1s show display 
             setTimeout(() => {
                 this.displayScreenDefault = this.displayScreenDefault === 'd-block' ? 'd-none' : 'd-block';
                 this.displayScreenNew = this.displayScreenNew === 'd-block' ? 'd-none' : 'd-block';
@@ -100,23 +102,30 @@ export default {
     },
 };
 </script>
+
 <template>
     <section id="movie-playlist">
+        <!-- Container -->
         <div class="container py-5">
+            <!-- Section title -->
             <div class="pb-2 ps-3 text-white section-title">
                 <h2>{{ section[0].title }}</h2>
                 <span>{{ section[0].subtitle }}</span>
             </div>
+            <!-- Section row  -->
             <div class="row g-0 pt-4 justify-content-between text-white">
+                <!-- Screen default empty -->
                 <div class="col-screen col-screen-default" :class="displayScreenDefault">
                     <div class="background-default">
                         <div class="background-default-top d-flex align-items-center p-3">
+                            <!-- Logo with text on top -->
                             <div>
                                 <img src="../../assets/img/channels4_profile.jpg" alt="logo-channel"
                                     class="logo-channel">
                                 <span class="ps-3">Yeh Saali Aashiqui | Official trailer | Verdhan Puri,
                                     Shivaleek...</span>
                             </div>
+                            <!-- See later and share on top -->
                             <div class="d-flex">
                                 <div class="text-center ps-5">
                                     <i class="fa-solid fa-clock"></i>
@@ -128,6 +137,7 @@ export default {
                                 </div>
                             </div>
                         </div>
+                        <!-- See on you tube on bottom -->
                         <div class="background-default-bottom py-2">
                             <span class="text-white">Guarda su</span>
                             <img src="../../assets/img/logo-youtube.webp" class="img-fluid youtube-logo"
@@ -135,15 +145,19 @@ export default {
                         </div>
                     </div>
                 </div>
+                <!-- Screen with fake new video -->
                 <div class="col-screen col-screen-new" :class="displayScreenNew">
                     <div class="background-new">
+                        <!-- Top  -->
                         <div class="background-new-top d-flex align-items-center justify-content-between p-3">
+                            <!-- Logo with text on top -->
                             <div>
                                 <img src="../../assets/img/channels4_profile.jpg" alt="logo-channel"
                                     class="logo-channel">
                                 <span class="ps-3">Yeh Saali Aashiqui | Official trailer | Verdhan Puri,
                                     Shivaleek...</span>
                             </div>
+                            <!-- See later and share on top -->
                             <div class="d-flex">
                                 <div class="text-center ps-5">
                                     <i class="fa-solid fa-clock"></i>
@@ -155,9 +169,11 @@ export default {
                                 </div>
                             </div>
                         </div>
+                        <!-- Center -->
                         <div class="background-new-center h-50 d-flex justify-content-center">
                             <img src="../../assets/img/image (11).svg" alt="img-youtube-video">
                         </div>
+                        <!-- Bottom -->
                         <div class="background-new-bottom py-2">
                             <span class="text-white">Guarda su</span>
                             <img src="../../assets/img/logo-youtube.webp" class="img-fluid youtube-logo"
@@ -165,14 +181,14 @@ export default {
                         </div>
                     </div>
                 </div>
-
-
+                <!-- Part right with playlist thumbnails -->
                 <div class="col-playlist">
                     <div class="playlist-title p-3">
                         <h3>New Movie</h3>
                         <span>Plying 24</span>
                     </div>
                     <div class="playlist-content p-3">
+                        <!-- For cycle single playlist -->
                         <div class="single-playlist d-flex" v-for="movie in movies" :key="movie.title">
                             <div class="playlist-figure pe-3">
                                 <img :src="movie.img" :alt="movie.title" class="figure-img">
@@ -205,27 +221,15 @@ export default {
         border-left: 2px solid $primary;
     }
 
+    // Generics two screens
     .col-screen {
         height: 500px;
         width: 66%;
         position: relative;
         display: none;
-    }
-
-    // Screen default black
-    .col-screen-default {
-        background-color: $black;
 
         .logo-channel {
             border-radius: 50%;
-        }
-
-        .background-default-bottom {
-            background-color: $dark-grey;
-            display: inline-block;
-            padding: 5px 10px;
-            position: absolute;
-            bottom: 5px;
         }
 
         .youtube-logo {
@@ -234,7 +238,20 @@ export default {
         }
     }
 
-    // Screen New with movie
+    // Screen default black
+    .col-screen-default {
+        background-color: $black;
+
+        .background-default-bottom {
+            background-color: $dark-grey;
+            display: inline-block;
+            padding: 5px 10px;
+            position: absolute;
+            bottom: 5px;
+        }
+    }
+
+    // Screen New with fake movie
     .col-screen-new {
         background-image: url('../../assets/img/maxresdefault.webp');
         background-position: center;
@@ -248,30 +265,22 @@ export default {
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.5);
 
+            .background-new-bottom {
+                background-color: $dark-grey;
+                display: inline-block;
+                padding: 5px 10px;
+                position: absolute;
+                bottom: 5px;
+            }
+
             .background-new-center img {
                 width: 70px;
                 cursor: pointer;
             }
         }
-
-        .logo-channel {
-            border-radius: 50%;
-        }
-
-        .background-new-bottom {
-            background-color: $dark-grey;
-            display: inline-block;
-            padding: 5px 10px;
-            position: absolute;
-            bottom: 5px;
-        }
-
-        .youtube-logo {
-            filter: invert(1);
-            width: 90px;
-        }
     }
 
+    // Playlist thumbnails
     .col-playlist {
         height: 500px;
         width: 31%;

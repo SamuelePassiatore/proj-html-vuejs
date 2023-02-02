@@ -1,8 +1,8 @@
 <script>
-import MoviesCard from '../cards/MoviesCard.vue';
+import NewmoviesCard from '../cards/NewmoviesCard.vue';
 export default {
     name: 'SectionNewmovie',
-    components: { MoviesCard },
+    components: { NewmoviesCard },
     data() {
         return {
             currentIndex: 0,
@@ -137,6 +137,7 @@ export default {
         }
     },
     computed: {
+        // computed to take only three movies
         visibleMovies() {
             return this.movies.slice(this.currentIndex, this.currentIndex + 3);
         }
@@ -162,7 +163,9 @@ export default {
 </script>
 <template>
     <section id="new-movie">
+        <!-- Container -->
         <div class="container pt-5">
+            <!-- Section title with icons to change image  -->
             <div class="pb-2 ps-3 text-white section-title d-flex justify-content-between align-items-center">
                 <div>
                     <h2>{{ section[0].title }}</h2>
@@ -173,6 +176,7 @@ export default {
                     <i class="fa-regular fa-circle-right fa-2x ps-2" @click="nextImage"></i>
                 </div>
             </div>
+            <!-- Row with for cycle and props passed to movies card -->
             <div class="row g-0 pt-4">
                 <movies-card v-for="(movie, index) in visibleMovies" :key="index" :movie="movie"
                     :class="{ 'border-slider': index === currentIndex, 'rounded-5': true }"></movies-card>
@@ -184,6 +188,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+// Section
 #new-movie {
     min-height: 500px;
     background-color: $dark-blue;
@@ -193,6 +198,7 @@ export default {
         border-bottom: 1px solid $light-blue;
         border-left: 2px solid $primary;
 
+        // Class icons
         .fa-regular {
             color: $primary;
             cursor: pointer;
@@ -203,6 +209,7 @@ export default {
         }
     }
 
+    // Border current image on slider
     .border-slider {
         border: 3px solid $primary;
     }

@@ -1,5 +1,6 @@
 @use './partials/variables' as *;
 
+// Generics
 body {
     font-family: $font;
 }
@@ -10,6 +11,7 @@ ul {
     padding: 0;
 }
 
+// Icons
 .fa-facebook-f {
     color: $blue-facebook;
 }

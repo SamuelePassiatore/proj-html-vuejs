@@ -7,9 +7,13 @@ export default {
 };
 </script>
 <template>
+    <!-- Single Column -->
     <div class="col-4 position-relative">
+        <!-- Single card -->
         <div class="card-custom">
+            <!-- Img -->
             <img :src="movie.img" class="card-image rounded-5 w-100">
+            <!-- Card body -->
             <div class="card-body text-white">
                 <h3 class="card-title">{{ movie.title }}</h3>
                 <span class="card-category">{{ movie.category }}</span>
@@ -23,22 +27,19 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+// Img
 .card-image {
     height: 500px;
     filter: brightness(0.6);
     border: 3px solid transparent;
 }
 
-.text-colored {
-    color: $primary;
-}
-
+// Card body
 .card-title {
     position: absolute;
     bottom: 125px;
     left: 12px;
 }
-
 
 .card-category {
     position: absolute;
@@ -70,5 +71,10 @@ export default {
     position: absolute;
     top: 20px;
     right: 10px;
+
+    .text-colored {
+        color: $primary;
+    }
+
 }
 </style>

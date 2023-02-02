@@ -8,14 +8,20 @@ export default {
     }
 };
 </script>
+
 <template>
+    <!-- Nav -->
     <nav class="d-flex justify-content-between align-items-center">
+        <!-- Left nav -->
         <ul class="d-flex p-0 m-0">
+            <!-- List with for cycle -->
             <li class="align-items-center pe-3" v-for="item in navbarItems" :key="item">
                 {{ item }}&blacktriangledown;
             </li>
         </ul>
+        <!-- Right nav -->
         <div class="d-flex">
+            <!-- Icon with number -->
             <i class="fa-solid fa-bag-shopping text-white"></i>
             <div class="circle">
                 <span class="circle-number">0</span>
@@ -30,6 +36,7 @@ export default {
 nav {
     height: 60px;
 
+    // Left nav
     li {
         list-style-type: none;
         cursor: pointer;
@@ -40,6 +47,7 @@ nav {
         }
     }
 
+    // Right nav
     .circle {
         width: 17px;
         height: 17px;

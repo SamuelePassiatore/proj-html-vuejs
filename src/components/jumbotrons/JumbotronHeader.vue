@@ -48,16 +48,20 @@ export default {
 </script>
 <template>
     <div class="jumbotron-header">
+        <!-- Arrow prev -->
         <i class="fa-solid fa-arrow-left fa-2x ps-5" @click="previousSlide"></i>
+        <!-- Jumbotron content -->
         <div class="jumbotron-header-content text-white" :style="{ backgroundImage: `url(${currentSlide.img})` }">
             <span>{{ currentSlide.welcome }}</span>
             <h2>{{ currentSlide.h2 }} <span class="title-colored">{{ currentSlide.h2Colored }}</span></h2>
             <p class="paragraph-jumbotron text-center">{{ currentSlide.paragraph }}</p>
             <button class="text-white border-0 rounded-5 px-4 py-2">{{ currentSlide.button }}</button>
         </div>
+        <!-- Arrow next -->
         <i class="fa-solid fa-arrow-right fa-2x pe-5" @click="nextSlide"></i>
     </div>
 </template>
+
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
@@ -67,6 +71,7 @@ export default {
     background-repeat: no-repeat;
     position: relative;
 
+    // Arrows
     .fa-solid {
         position: absolute;
         top: 50%;
@@ -83,6 +88,7 @@ export default {
         right: 0;
     }
 
+    // Jumbotron content
     .jumbotron-header-content {
         display: flex;
         flex-direction: column;
@@ -91,18 +97,18 @@ export default {
         height: 100%;
         padding-left: 300px;
         transition: background-image 1s;
-    }
 
-    .title-colored {
-        color: $primary;
-    }
+        .title-colored {
+            color: $primary;
+        }
 
-    .paragraph-jumbotron {
-        width: 40%;
-    }
+        .paragraph-jumbotron {
+            width: 40%;
+        }
 
-    button {
-        background-color: $primary;
+        button {
+            background-color: $primary;
+        }
     }
 }
 </style>

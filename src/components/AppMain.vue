@@ -15,7 +15,9 @@ export default {
     }
 };
 </script>
+
 <template>
+    <!-- All section components with jumbotron main and send-form -->
     <section-newmovie></section-newmovie>
     <section-movieplaylist></section-movieplaylist>
     <jumbotron-main></jumbotron-main>
@@ -23,6 +25,7 @@ export default {
     <section-latestnews></section-latestnews>
     <send-form></send-form>
 </template>
+
 <style lang="scss" scoped>
 
 </style>

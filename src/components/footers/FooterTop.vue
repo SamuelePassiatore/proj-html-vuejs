@@ -35,10 +35,14 @@ export default {
 
 <template>
     <div class="footer-top">
+        <!-- Dark overlay -->
         <div class="overlay">
+            <!-- Container flex -->
             <div class="container d-flex">
+                <!-- About us -->
                 <div class="about text-white w-25 py-5 pe-5">
                     <h3 class="m-0">{{ about[0].title }}</h3>
+                    <!-- White line -->
                     <div class="border-bottom mb-4"></div>
                     <p class="pb-2">{{ about[0].paragraph }}</p>
                     <div class="icons d-flex">
@@ -49,13 +53,16 @@ export default {
                         <a href="#" class="pinterest-circle"><i class="fa-brands fa-pinterest"></i></a>
                     </div>
                 </div>
+                <!-- Movie category -->
                 <div class="movie-category text-white w-25 py-5 px-5">
                     <h3 class="m-0">Movie Category</h3>
                     <div class="border-bottom mb-4"></div>
                     <ul>
+                        <!-- List with for cycle -->
                         <li class="pb-4" v-for="category in categoryList" :key="category">{{ category }}</li>
                     </ul>
                 </div>
+                <!-- Information -->
                 <div class="information text-white w-25 py-5 px-5">
                     <h3 class="m-0">Information</h3>
                     <div class="border-bottom mb-4"></div>
@@ -63,6 +70,7 @@ export default {
                         <li class="pb-4" v-for="information in informations" :key="information">{{ information }}</li>
                     </ul>
                 </div>
+                <!-- Recent post -->
                 <div class="recent-post text-white w-25 py-5 ps-5">
                     <h3 class="m-0">Recent Post</h3>
                     <div class="border-bottom mb-4"></div>
@@ -98,12 +106,30 @@ export default {
         background-color: rgba(24, 32, 40, 0.93);
     }
 
+    // White line
     .border-bottom {
         background-color: $white;
         height: 2px;
         width: 35px;
     }
 
+    // About us 
+    a {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa-brands {
+        color: $white;
+    }
+
+    // Icons with div circle
     .facebook-circle {
         background-color: $blue-facebook;
     }
@@ -124,23 +150,13 @@ export default {
         background-color: $red;
     }
 
-    a {
-        text-decoration: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .fa-brands {
-        color: $white;
-    }
+    // Recent posts 
 
     .font-smaller {
         font-size: 14px;
     }
+
+
+
 }
 </style>

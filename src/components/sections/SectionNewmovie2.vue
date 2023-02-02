@@ -66,32 +66,41 @@ export default {
 </script>
 <template>
     <section id="new-movie-2">
+        <!-- Container -->
         <div class="container pt-5">
+            <!-- Section title -->
             <div class="pb-2 ps-3 section-title text-white d-flex justify-content-between align-items-center">
                 <div>
                     <h2>{{ section[0].title }}</h2>
                     <span>{{ section[0].subtitle }}</span>
                 </div>
             </div>
+            <!-- Genre movies list  -->
             <div class="py-4">
                 <ul class="d-flex">
+                    <!-- for cycle on genres arrays -->
                     <li class="fs-5 pe-4" v-for="(genre, index) in genres" :key="genre"
                         :class="{ 'text-colored': index === 0 }">{{ genre }}
                     </li>
                 </ul>
             </div>
+            <!-- Row with cards -->
             <div class="row g-4">
+                <!-- for cycle on movies object array -->
                 <div class="col-4" v-for="movie in movies" :key="movie.title">
+                    <!-- Card -->
                     <div class="card-custom">
+                        <!-- card img -->
                         <img :src="movie.img" class="card-image">
+                        <!-- card body -->
                         <div class="card-body">
                             <h3 class="card-title fw-bold">{{ movie.title }}</h3>
                             <span class="card-category fw-bold fs-5">Category: {{ movie.category }}</span>
                             <span class="card-details">{{ movie.details }}</span>
                             <span class="card-views">{{ movie.views }}</span>
-                            <span class="card-star"><i class="fa-solid fa-star text-colored pe-1"></i>{{
-                                movie.star
-                            }}</span>
+                            <span class="card-star">
+                                <i class="fa-solid fa-star text-colored pe-1"></i>{{ movie.star }}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -103,6 +112,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+// Section new movie 2
 #new-movie-2 {
     min-height: 500px;
     background-color: $dark-blue;
@@ -112,6 +122,7 @@ export default {
         border-left: 2px solid $primary;
     }
 
+    // Generics
     li {
         color: $white;
         cursor: pointer;
@@ -121,6 +132,7 @@ export default {
         color: $primary;
     }
 
+    // Card
     .card-custom {
         position: relative;
         color: $white;
@@ -132,12 +144,12 @@ export default {
         filter: brightness(0.6);
     }
 
+    // Card body
     .card-title {
         position: absolute;
         bottom: 125px;
         left: 12px;
     }
-
 
     .card-category {
         position: absolute;
