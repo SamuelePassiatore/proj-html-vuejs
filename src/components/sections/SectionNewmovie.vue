@@ -139,7 +139,16 @@ export default {
     computed: {
         // computed to take only three movies
         visibleMovies() {
-            return this.movies.slice(this.currentIndex, this.currentIndex + 3);
+            const slicedMovies = this.movies.slice(this.currentIndex, this.currentIndex + 3);
+            if (slicedMovies.length === 2) {
+                slicedMovies.push(this.movies[0]);
+            }
+
+            if (slicedMovies.length === 1) {
+                slicedMovies.push(this.movies[0]);
+                slicedMovies.push(this.movies[1]);
+            }
+            return slicedMovies;
         }
     },
 
@@ -178,8 +187,7 @@ export default {
             </div>
             <!-- Row with for cycle and props passed to movies card -->
             <div class="row g-0 pt-4">
-                <newmovies-card v-for="(movie, index) in visibleMovies" :key="index" :movie="movie"
-                    :class="{ 'border-slider': index === currentIndex, 'rounded-5': true }"></newmovies-card>
+                <newmovies-card v-for="(movie, index) in visibleMovies" :key="index" :movie="movie"></newmovies-card>
             </div>
         </div>
     </section>
@@ -209,10 +217,6 @@ export default {
         }
     }
 
-    // Border current image on slider
-    .border-slider {
-        border: 3px solid $primary;
-    }
 
 }
 </style>
